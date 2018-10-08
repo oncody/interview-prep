@@ -1,3 +1,5 @@
+package base;
+
 public class BinarySearchMetadata {
   private final int maxIterations;
   private final int iterations;

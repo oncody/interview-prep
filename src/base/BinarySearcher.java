@@ -1,3 +1,5 @@
+package base;
+
 import java.util.List;
 
 public class BinarySearcher<T extends Comparable<? super T>> {

@@ -1,3 +1,5 @@
+package base;
+
 public class IntegerUtils {
   public static String toBinary(int number) {
     String binary = "";

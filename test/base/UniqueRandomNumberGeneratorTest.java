@@ -1,3 +1,6 @@
+package base;
+
+import base.UniqueRandomNumberGenerator;
 import java.util.Random;
 import java.util.Set;
 import org.junit.jupiter.api.Test;

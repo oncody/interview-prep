@@ -1,3 +1,8 @@
+package base;
+
+import base.BinarySearchMetadata;
+import base.BinarySearcher;
+import base.UniqueRandomNumberGenerator;
 import java.util.List;
 import java.util.Random;
 import java.util.Set;
