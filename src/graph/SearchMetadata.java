@@ -1,8 +1,10 @@
+package graph;
+
 import java.util.List;
 
 public class SearchMetadata<T> {
-  private List<T> exploredNodes;
-  private boolean found = false;
+  private final List<T> exploredNodes;
+  private final boolean found;
 
   public SearchMetadata(List<T> exploredNodes, boolean found) {
     this.exploredNodes = exploredNodes;

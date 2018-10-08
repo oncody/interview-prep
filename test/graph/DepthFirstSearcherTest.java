@@ -1,8 +1,7 @@
-import org.junit.jupiter.api.Test;
+package graph;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class DepthFirstSearcherTest {
   @Test
@@ -10,11 +9,11 @@ public class DepthFirstSearcherTest {
     GraphNode<Integer> graph = GraphNodeGenerator.generateDepthFirstSearch();
     DepthFirstSearcher<Integer> depthFirstSearcher = new DepthFirstSearcher<>(graph, 12);
     SearchMetadata metadata = depthFirstSearcher.search();
-    assertTrue(metadata.isFound());
+    Assertions.assertTrue(metadata.isFound());
     System.out.println(metadata.getExploredNodes());
-    assertEquals(12, metadata.getExploredNodes().size());
+    Assertions.assertEquals(12, metadata.getExploredNodes().size());
     for(int i = 0; i < metadata.getExploredNodes().size(); i++) {
-      assertEquals(i + 1, metadata.getExploredNodes().get(i));
+      Assertions.assertEquals(i + 1, metadata.getExploredNodes().get(i));
     }
   }
   @Test
@@ -22,11 +21,11 @@ public class DepthFirstSearcherTest {
     GraphNode<Integer> graph = GraphNodeGenerator.generateDepthFirstSearch();
     DepthFirstSearcher<Integer> depthFirstSearcher = new DepthFirstSearcher<>(graph, 13);
     SearchMetadata metadata = depthFirstSearcher.search();
-    assertFalse(metadata.isFound());
+    Assertions.assertFalse(metadata.isFound());
     System.out.println(metadata.getExploredNodes());
-    assertEquals(12, metadata.getExploredNodes().size());
+    Assertions.assertEquals(12, metadata.getExploredNodes().size());
     for(int i = 0; i < metadata.getExploredNodes().size(); i++) {
-      assertEquals(i + 1, metadata.getExploredNodes().get(i));
+      Assertions.assertEquals(i + 1, metadata.getExploredNodes().get(i));
     }
   }
 }
