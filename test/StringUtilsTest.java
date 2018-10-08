@@ -27,4 +27,8 @@ class StringUtilsTest {
   void areAnagramsFalse() {
     assertFalse(StringUtils.areAnagrams("abccba", "aabbc"));
   }
+  @Test
+  void reverseStringHappyPath() {
+    assertEquals("edcba", StringUtils.reverseString("abcde"));
+  }
 }
